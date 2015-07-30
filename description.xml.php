@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
-	<ShortName>Web Search</ShortName>
-	<Description>Use Example.com to search the Web.</Description>
-	<Tags>example web</Tags>
-	<Contact>admin@example.com</Contact>
-	<Url type="application/rss+xml" 
-	    template="http://example.com/?q={searchTerms}&amp;pw={startPage?}&amp;format=rss"/>
+	<ShortName>Awesome Search</ShortName>
+	<Description>Use awesome-projects.eu to search the Web.</Description>
+	<Tags>awesome web</Tags>
+	<Contact>search@awesome-projects.eu</Contact>
+	<Url type="text/html" template="http://example.com/?q={searchTerms}"/>
 </OpenSearchDescription>
