@@ -4,11 +4,13 @@
 	$searches = array(
 		array(
 			"name" => "Google",
-			"prefix" => "g"
+			"prefix" => "g",
+			"url" => "https://www.google.de/search?q={searchTerms}&ie=utf-8&oe=utf-8"
 		),
 		array(
 			"name" => "YouTube",
-			"prefix" => "yt"
+			"prefix" => "yt",
+			"url" => "http://www.youtube.com/results?search_query={searchTerms}&utm_source=opensearch"
 		)
 	);
 	
