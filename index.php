@@ -1,5 +1,10 @@
 <?php
 	
+	ini_set('display_errors',1);
+	error_reporting(E_ALL|E_STRICT);
+	ini_set('error_log','script_errors.log');
+	ini_set('log_errors','On');
+
 	if(!isset($_GET["q"])) {
 		header("Location: about.php");
 	}
@@ -12,7 +17,8 @@
 	
 	$q_arr = BuildQueryArray($query);
 	
-	echo "Searching on " . $searches[ $q_arr["engine"] ]["name"] . " for '";
+	echo "Searching on ";
+	echo $searches[ $q_arr["engine"] ]["name"] . " for '";
 	echo $q_arr["query"];
 	echo "'";
 	

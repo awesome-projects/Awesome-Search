@@ -24,7 +24,7 @@
 		$prefixs[ $searches[$i]["prefix"] ] = $i;
 		
 		if(strlen($searches[$i]["prefix"]) > $max_len) {
-			$max_len = strlen($searches[$i]["prefix"];
+			$max_len = strlen($searches[$i]["prefix"]);
 		}
 	}
 	
