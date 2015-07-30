@@ -5,7 +5,20 @@
 		array(
 			"name" => "Google",
 			"prefix" => "g",
-			"url" => "https://www.google.de/search?q={searchTerms}&ie=utf-8&oe=utf-8"
+			"url" => "https://www.google.de/search?q={searchTerms}&ie=utf-8&oe=utf-8",
+			"suggestions" => "https://www.google.com/complete/search?client=firefox&q={searchTerms}"
+		),
+		array(
+			"name" => "Bing",
+			"prefix" => "b",
+			"url" => "https://www.bing.com/search?query={searchTerms}",
+			"suggestions" => "https://www.bing.com/osjson.aspx?query={searchTerms}&form=OSDJAS"
+		),
+		array(
+			"name" => "Yahoo",
+			"prefix" => "y",
+			"url" => "https://search.yahoo.com/yhs/search",
+			"suggestions" => "https://search.yahoo.com/sugg/ff?output=fxjson&appid=ffd&command={searchTerms}"
 		),
 		array(
 			"name" => "YouTube",

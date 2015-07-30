@@ -7,6 +7,7 @@
 
 	if(!isset($_GET["q"])) {
 		header("Location: about.php");
+		die("42");
 	}
 	
 	include_once("core.php");
@@ -17,9 +18,20 @@
 	
 	$q_arr = BuildQueryArray($query);
 	
-	echo "Searching on ";
+	/*echo "Searching on ";
 	echo $searches[ $q_arr["engine"] ]["name"] . " for '";
 	echo $q_arr["query"];
-	echo "'";
+	echo "'";*/
+	
+	$url = $searches[ $q_arr["engine"] ]["url"];
+	
+	$url = str_replace("&", "&amp;", $url);
+	
+	$urlQueryString = urlencode($q_arr["query"]);
+	
+	$url = str_replace('{searchTerms}', $urlQueryString, $url);
+	
+	header("Location: ".$url);
+	//echo $url;
 	
 ?>
