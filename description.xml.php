@@ -4,5 +4,5 @@
 	<Description>Use awesome-projects.eu to search the Web.</Description>
 	<Tags>awesome web</Tags>
 	<Contact>search@awesome-projects.eu</Contact>
-	<Url type="text/html" template="http://example.com/?q={searchTerms}"/>
+	<Url type="text/html" template="http://search.awesome-projects.eu/?q={searchTerms}"/>
 </OpenSearchDescription>
