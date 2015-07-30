@@ -25,7 +25,7 @@
             "prefix" => "w",
             "url" => "https://en.wikipedia.org/wiki/Special:Search?search={searchTerms}",
             "suggestions" => "https://en.wikipedia.org/w/api.php?search={searchTerms}"
-        )
+        ),
 		array(
 			"name" => "YouTube",
 			"prefix" => "yt",
