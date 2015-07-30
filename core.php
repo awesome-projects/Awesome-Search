@@ -20,11 +20,22 @@
 			"url" => "https://search.yahoo.com/yhs/search",
 			"suggestions" => "https://search.yahoo.com/sugg/ff?output=fxjson&appid=ffd&command={searchTerms}"
 		),
+        array(
+            "name" => "Wikipedia",
+            "prefix" => "w",
+            "url" => "https://en.wikipedia.org/wiki/Special:Search?search={searchTerms}",
+            "suggestions" => "https://en.wikipedia.org/w/api.php?search={searchTerms}"
+        )
 		array(
 			"name" => "YouTube",
 			"prefix" => "yt",
 			"url" => "http://www.youtube.com/results?search_query={searchTerms}&utm_source=opensearch"
-		)
+		),
+		array(
+			"name" => "Twitch",
+            "prefix" => "tw",
+            "url" => "http://www.twitch.tv/search?query={searchTerms}"
+        )
 	);
 	
 	$prefixs = array();
