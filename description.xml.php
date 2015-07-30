@@ -5,4 +5,5 @@
 	<Tags>awesome web</Tags>
 	<Contact>search@awesome-projects.eu</Contact>
 	<Url type="text/html" template="http://search.awesome-projects.eu/?q={searchTerms}"/>
+	<Query role="example" searchTerms="cat" />
 </OpenSearchDescription>
