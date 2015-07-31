@@ -16,6 +16,9 @@
 	
 	if(strlen($query) > 512) { $query = substr($query, 0, 512); }
 	
+    AddSearchPack("anime");
+    AddSearchPack("art");
+    AddSearchPack("programming");
 	AddSearchPack("shopping");
 	
 	InitSearchPrefixs();
