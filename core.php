@@ -1,7 +1,7 @@
 <?php
 	
 	//search engine data (default pack)
-	$searches = array(
+	$provider = array(
 		array(
 			"name" => "Google",
 			"prefix" => "g",
@@ -54,28 +54,28 @@
 	//functions
 	
 	function AddSearchPack($name) {
-		global $searches;
+		global $provider;
 		
 		$filepath = __DIR__ . "/packs/" . $name . ".pack.php";
 		
 		if(file_exists($filepath)) {
 			include_once($filepath);
 		} else {
-			die("fuck i cant find that shit: ".$filepath);
+			//something went wrong
 		}
 	}
 	
 	function InitSearchPrefixs() {
-		global $searches, $max_len, $prefixs;
+		global $provider, $max_len, $prefixs;
 		
 		//converting
-		$n = count($searches);
+		$n = count($provider);
 		
 		for($i=0; $i<$n; $i++) {
-			$prefixs[ $searches[$i]["prefix"] ] = $i;
+			$prefixs[ $provider[$i]["prefix"] ] = $i;
 			
-			if(strlen($searches[$i]["prefix"]) > $max_len) {
-				$max_len = strlen($searches[$i]["prefix"]);
+			if(strlen($provider[$i]["prefix"]) > $max_len) {
+				$max_len = strlen($provider[$i]["prefix"]);
 			}
 		}
 	}
@@ -105,6 +105,10 @@
 		}
 		
 		return $result;
+	}
+	
+	function GetSuggestions($provider, $query) {
+		global $provider;
 	}
 
 ?>

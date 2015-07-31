@@ -22,7 +22,7 @@
 	
 	$q_arr = BuildQueryArray($query);
 	
-	$url = $searches[ $q_arr["engine"] ]["url"];
+	$url = $provider[ $q_arr["engine"] ]["url"];
 	
 	$url = str_replace("&", "&amp;", $url);
 	
