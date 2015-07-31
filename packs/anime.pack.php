@@ -3,7 +3,7 @@
 	$provider[] = array(
 		"name" => "AniSearch",
 		"prefix" => "as",
-		"url" => "http://www.anisearch.com/anime/index/?char=all&sort=rank&q=true&text={searchTerms}"
+		"url" => "http://en.anisearch.com/anime/index/?char=all&text={searchTerms}&q=true"
 	);
 
     $provider[] = array(
