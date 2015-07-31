@@ -107,7 +107,7 @@
 		return $result;
 	}
 	
-	/*function GetSuggestions($provider, $query) {
+	function GetSuggestions($provider, $query) {
 		global $provider;
 		
 		$suggestions = array(
@@ -129,7 +129,17 @@
 		
 		$json = json_decode($raw);
 		
+		if(is_null($json) || !is_array($json) || count($json)!=4) { return $suggestions; }
+		
+		if(is_array($json[1]) && count($json[1])>0) {
+			foreach($json[1] as $s) {
+				$suggestions[1][] = $s;
+			}
+		}
+		
+		//TODO: support descriptions & query urls
+		
 		return $suggestions;
-	}*/
+	}
 
 ?>

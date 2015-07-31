@@ -27,7 +27,7 @@
 	
 	$url = $provider[ $q_arr["engine"] ]["url"];
 	
-	$url = str_replace("&", "&amp;", $url);
+	//$url = str_replace("&", "&amp;", $url);
 	
 	$urlQueryString = urlencode($q_arr["query"]);
 	
