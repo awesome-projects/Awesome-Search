@@ -3,7 +3,7 @@
 	
 	<head>
 		<meta charset="utf-8">
-		<title>Awesome Search</title>
+		<title>Unify Search</title>
 		
 		<link rel="search" href="description.xml.php" 
 	      type="application/opensearchdescription+xml" 
@@ -13,7 +13,7 @@
 	</head>
 	
 	<body>
-		The Awesome Search Engine
+		The Unified Search Engine
 		
 		<a id="install-link" href="description.xml.php" type="application/opensearchdescription+xml" search>install</a>
 		
