@@ -17,7 +17,7 @@
 		array(
 			"name" => "Yahoo",
 			"prefix" => "y",
-			"url" => "https://search.yahoo.com/yhs/search",
+			"url" => "https://search.yahoo.com/yhs/search?p={searchTerms}&ei=UTF-8",
 			"suggestions" => "https://search.yahoo.com/sugg/ff?output=fxjson&appid=ffd&command={searchTerms}"
 		),
 		array(
