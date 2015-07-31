@@ -33,7 +33,6 @@
 	
 	$url = str_replace('{searchTerms}', $urlQueryString, $url);
 	
-	header("Location: ".$url);
-	//echo $url;
+	if(trim($url) != '') { header("Location: ".$url); }
 	
 ?>

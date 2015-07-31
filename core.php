@@ -107,8 +107,29 @@
 		return $result;
 	}
 	
-	function GetSuggestions($provider, $query) {
+	/*function GetSuggestions($provider, $query) {
 		global $provider;
-	}
+		
+		$suggestions = array(
+				$query,		//Query String
+				array(),	//Completions
+				array(), 	//Descriptions
+				array()		//Query URLs
+			);	
+		
+		$c = curl_init();
+		
+		curl_setopt($c, CURLOPT_URL, $url);
+		curl_setopt($c, CURLOPT_CONNECTTIMEOUT, 2);
+		curl_setopt($c, CURLOPT_RETURNTRANSFER, 1);
+		
+		$raw = curl_exec($c);
+		
+		curl_close($c);
+		
+		$json = json_decode($raw);
+		
+		return $suggestions;
+	}*/
 
 ?>
