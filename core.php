@@ -1,6 +1,6 @@
 <?php
 	
-	//search engine data
+	//search engine data (default pack)
 	$searches = array(
 		array(
 			"name" => "Google",
@@ -19,6 +19,11 @@
 			"prefix" => "y",
 			"url" => "https://search.yahoo.com/yhs/search",
 			"suggestions" => "https://search.yahoo.com/sugg/ff?output=fxjson&appid=ffd&command={searchTerms}"
+		),
+		array(
+			"name" => "Facebook",
+			"prefix" => "fb",
+			"url" => "https://www.facebook.com/search/str/{searchTerms}/keywords_users" //http://stackoverflow.com/questions/2263287/does-facebook-have-a-public-search-api-yet (suggestions)
 		),
         array(
             "name" => "Wikipedia",

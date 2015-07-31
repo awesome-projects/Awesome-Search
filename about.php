@@ -12,5 +12,7 @@
 	
 	<body>
 		The Awesome Search Engine
+		
+		<a href="description.xml.php" type="application/opensearchdescription+xml">install</a>
 	</body>
 </html>
