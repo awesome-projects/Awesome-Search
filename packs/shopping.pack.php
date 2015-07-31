@@ -10,8 +10,8 @@
     $provider[] = array(
         "name" => "Ebay",
         "prefix" => "e",
-        "url" => "http://shop.ebay.de/?_nkw={searchQuery}",
-        "suggestions" => "http://anywhere.ebay.com/services/suggest/?s=0&q={searchQuery}"
+        "url" => "http://shop.ebay.de/?_nkw={searchTerms}",
+        "suggestions" => "http://anywhere.ebay.com/services/suggest/?s=0&q={searchTerms}"
     );
 	
 ?>
