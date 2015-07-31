@@ -16,12 +16,11 @@
 	
 	if(strlen($query) > 512) { $query = substr($query, 0, 512); }
 	
-	$q_arr = BuildQueryArray($query);
+	AddSearchPack("shopping");
 	
-	/*echo "Searching on ";
-	echo $searches[ $q_arr["engine"] ]["name"] . " for '";
-	echo $q_arr["query"];
-	echo "'";*/
+	InitSearchPrefixs();
+	
+	$q_arr = BuildQueryArray($query);
 	
 	$url = $searches[ $q_arr["engine"] ]["url"];
 	

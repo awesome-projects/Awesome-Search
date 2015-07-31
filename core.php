@@ -49,23 +49,33 @@
 	);
 	
 	$prefixs = array();
-	
-	//setting things up
 	$max_len = 0;
 	
-	//converting
-	$n = count($searches);
+	//functions
 	
-	for($i=0; $i<$n; $i++) {
-		$prefixs[ $searches[$i]["prefix"] ] = $i;
+	function AddSearchPack($name) {
+		$filepath = __DIR__ . "/packs/" . $name . ".pack.php";
 		
-		if(strlen($searches[$i]["prefix"]) > $max_len) {
-			$max_len = strlen($searches[$i]["prefix"]);
+		if(file_exists($filepath)) {
+			include_once($filepath);
 		}
 	}
 	
+	function InitSearchPrefixs() {
+		global $searches, $max_len, $prefixs;
+		
+		//converting
+		$n = count($searches);
+		
+		for($i=0; $i<$n; $i++) {
+			$prefixs[ $searches[$i]["prefix"] ] = $i;
+			
+			if(strlen($searches[$i]["prefix"]) > $max_len) {
+				$max_len = strlen($searches[$i]["prefix"]);
+			}
+		}
+	}
 	
-	//functions
 	function BuildQueryArray($queryString) {
 		global $prefixs, $max_len;
 		
