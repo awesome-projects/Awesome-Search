@@ -54,10 +54,14 @@
 	//functions
 	
 	function AddSearchPack($name) {
+		global $searches;
+		
 		$filepath = __DIR__ . "/packs/" . $name . ".pack.php";
 		
 		if(file_exists($filepath)) {
 			include_once($filepath);
+		} else {
+			die("fuck i cant find that shit: ".$filepath);
 		}
 	}
 	
