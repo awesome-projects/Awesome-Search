@@ -37,6 +37,11 @@
 			"url" => "http://www.youtube.com/results?search_query={searchTerms}&utm_source=opensearch"
 		),
 		array(
+			"name" => "Twitter",
+			"prefix" => "t",
+			"url" => "https://twitter.com/search?q={searchTerms}&source=desktop-search" //partner=Firefox
+		),
+		array(
 			"name" => "Twitch",
             "prefix" => "tw",
             "url" => "http://www.twitch.tv/search?query={searchTerms}"
