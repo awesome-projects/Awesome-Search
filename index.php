@@ -6,7 +6,7 @@
 	ini_set('log_errors','On');
 
 	if(!isset($_GET["q"])) {
-		header("Location: about.php");
+		header("Location: /about");
 		die("42");
 	}
 	

@@ -1,3 +1,4 @@
 Options -indexes
-#RewriteEngine On
-#RewriteRule ^description.xml$ description.xml.php
+RewriteEngine On
+RewriteRule ^description.xml$ description.xml.php
+RewriteRule ^about$ about.php
