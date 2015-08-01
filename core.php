@@ -53,7 +53,7 @@
 	
 	//functions
 	
-	function AddSearchPack($name) {
+	function AddPack($name) {
 		global $provider;
 		
 		$filepath = __DIR__ . "/packs/" . $name . ".pack.php";
@@ -63,6 +63,16 @@
 		} else {
 			//something went wrong
 		}
+	}
+	
+	function AddPackArray($arr) {
+		
+		if(is_array($arr)) {
+			foreach($arr as $pack) {
+				AddPack($pack);
+			}
+		}
+		
 	}
 	
 	function InitSearchPrefixs() {
@@ -80,13 +90,15 @@
 		}
 	}
 	
-	function BuildQueryArray($queryString) {
-		global $prefixs, $max_len;
+	function BuildQueryArray($queryString, $fallback=0) {
+		global $prefixs, $max_len, $provider;
+		
+		if($fallback > count($provider)) { $fallback = 0; }
 		
 		$prefix = trim( substr($queryString, 0, $max_len) );
 		
 		$result = array(
-				"engine" => 0,
+				"engine" => $fallback,
 				"query" => ''
 			);
 		

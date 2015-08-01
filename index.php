@@ -1,33 +1,26 @@
 <?php
 	
-	ini_set('display_errors',1);
+	/*ini_set('display_errors',1);
 	error_reporting(E_ALL|E_STRICT);
 	ini_set('error_log','script_errors.log');
-	ini_set('log_errors','On');
+	ini_set('log_errors','On');*/
 
 	if(!isset($_GET["q"])) {
 		header("Location: /about");
-		die("42");
+		die();
 	}
 	
 	include_once("core.php");
 	
-	$query = preg_replace('/\s+/', ' ', trim($_GET["q"]) );
+	include_once("url-param-parser.php");
 	
-	if(strlen($query) > 512) { $query = substr($query, 0, 512); }
-	
-    AddSearchPack("anime");
-    AddSearchPack("art");
-    AddSearchPack("programming");
-	AddSearchPack("shopping");
+	AddPackArray($packs); //defined in url-param-parser.php
 	
 	InitSearchPrefixs();
 	
-	$q_arr = BuildQueryArray($query);
+	$q_arr = BuildQueryArray($query, $fallback);
 	
 	$url = $provider[ $q_arr["engine"] ]["url"];
-	
-	//$url = str_replace("&", "&amp;", $url);
 	
 	$urlQueryString = urlencode($q_arr["query"]);
 	

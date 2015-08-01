@@ -28,6 +28,8 @@
 				
 				return false;
 			}, false);
+			
+			//http://stackoverflow.com/questions/1384988/is-there-anyway-to-detect-whether-a-specific-opensearch-search-engine-has-been-a
 		</script>
 	</body>
 </html>
