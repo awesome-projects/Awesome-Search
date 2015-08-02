@@ -8,6 +8,6 @@
 <OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
 	<ShortName>Unified Search</ShortName>
 	<Description>Use unifysear.ch to search the Web.</Description>
-	<Url type="text/html" template="http://unifysear.ch/?q={searchTerms}"/>
+	<Url type="text/html" template="http://unifysear.ch/search?q={searchTerms}"/>
 	<Url type="application/x-suggestions+json" template="http://unifysear.ch/suggestions.php?q={searchTerms}"/>
 </OpenSearchDescription>

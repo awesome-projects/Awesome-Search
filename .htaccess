@@ -1,4 +1,5 @@
 Options -indexes
 RewriteEngine On
 RewriteRule ^description.xml$ description.xml.php
-RewriteRule ^about$ about.php
+RewriteRule ^about$ index.php
+RewriteRule ^search$ search.php
